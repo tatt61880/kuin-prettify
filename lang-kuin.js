@@ -1,6 +1,6 @@
 /**
  * @license
- * Copyright (C) 2016 tatt61880
+ * Copyright (C) 2017 tatt61880
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,12 +42,12 @@ PR['registerLangHandler'](
          [PR['PR_COMMENT'], /^\s*;.*/, null],
          [PR['PR_TYPE'],    /\b(?:int|float|char|bool|bit8|bit16|bit32|bit64|list|stack|queue|dict)\b/, null],
          [PR['PR_KEYWORD'], /\b(?:func|var|const|class|enum)\b/, null],
-         [PR['PR_KEYWORD'], /\b(?:if|elif|else|switch|case|default|while|for|foreach|try|catch|finally|ifdef|block)\b/, null],
+         [PR['PR_KEYWORD'], /\b(?:if|elif|else|switch|case|default|while|for|try|catch|finally|block)\b/, null],
          [PR['PR_KEYWORD'], /\b(?:do|break|skip|ret|assert|throw)\b/, null],
          [PR['PR_KEYWORD'], /\b(?:end|to|me|alias)\b/, null],
          [PR['PR_LITERAL'], /\b\d\.\d+(?!\.)(:?e[\+-]\d+)?\b/, null],
          [PR['PR_LITERAL'], /\b\d+(?:b(?:8|16|32|64))?\b/, null],
-         [PR['PR_LITERAL'], /\b(?:true|false|null|inf|rls|dbg)\b/, null],
+         [PR['PR_LITERAL'], /\b(?:true|false|null|inf|dbg)\b/, null],
          [PR['PR_PLAIN'],   /\b[A-Za-z_][0-9A-Za-z_@]*\b/, null],
          [PR['PR_PUNCTUATION'], /\.|\$(?:>|<)?|\^|\+|-|!|##?|\*|\/|%|~|(?:=|<>)(?:&|\$)?|<=?|>=?|&|\||\?|:(?::|\+|-|\*|\/|%|\^|~)?/, null],
         ]),
