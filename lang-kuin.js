@@ -45,7 +45,7 @@ PR['registerLangHandler'](
          [PR['PR_KEYWORD'], /\b(?:if|elif|else|switch|case|default|while|for|try|catch|finally|block)\b/, null],
          [PR['PR_KEYWORD'], /\b(?:do|break|skip|ret|assert|throw)\b/, null],
          [PR['PR_KEYWORD'], /\b(?:end|to|me|alias)\b/, null],
-         [PR['PR_LITERAL'], /\b\d\.\d+(?!\.)(:?e[\+-]\d+)?\b/, null],
+         [PR['PR_LITERAL'], /\b\d+\.\d+(:?e[\+-]\d+)?\b/, null],
          [PR['PR_LITERAL'], /\b\d+(?:b(?:8|16|32|64))?\b/, null],
          [PR['PR_LITERAL'], /\b(?:true|false|null|inf|dbg)\b/, null],
          [PR['PR_PLAIN'],   /\b[A-Za-z_][0-9A-Za-z_@]*\b/, null],
