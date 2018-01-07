@@ -1,0 +1,54 @@
+/* For google prettify. This scheme is basically based on Kuin Editor */
+pre.prettyprint { display:block; background-color:#FFF5F5 }
+pre .nocode { background-color:none; color:#000; }
+pre .str { color:#EA0062 } /* string */
+pre .kwd { color:#1400F6 } /* keyword */
+pre .com { color:#1EB000 } /* comment */
+pre .typ { color:#1400F6 } /* type */
+pre .lit { color:#EA0062 } /* literal */
+pre .pln { color:#009BEA } /* plaintext */
+pre .pun { color:#666666 } /* punctuation */
+pre .opn { color:#666666 } /* ( */
+pre .clo { color:#666666 } /* ) */
+pre .global { color:#CC00F6 } /* global */
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+	margin:0;
+}
+li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+	border-left:solid 2px #FF7F7F; padding-left:8px; color:#FF7F7F;
+}
+
+@media print {
+	pre.prettyprint { background-color: none }
+	pre .str, code .str { color:#060 }
+	pre .kwd, code .kwd { color:#006; font-weight:bold }
+	pre .com, code .com { color:#600; font-style:italic }
+	pre .typ, code .typ { color:#404; font-weight:bold }
+	pre .lit, code .lit { color:#044 }
+	pre .pun, code .pun { color:#440 }
+	pre .pln, code .pln { color:#000 }
+	pre .tag, code .tag { color:#006; font-weight:bold }
+	pre .atn, code .atn { color:#404 }
+	pre .atv, code .atv { color:#060 }
+}
+
+/* 以下は追加のスタイルの例 */
+.prettifydiv{
+	font-size: 14px;
+}
+
+pre.prettyprint {
+	margin:8px 5px 8px 5px;
+	padding:0;
+	border:none;
+	overflow:auto;
+	z-index:10;
+	white-space:pre;
+	border-radius:8px;
+}
+
+pre.prettyprint ol {
+	padding:8px 0 8px 4em;
+}
