@@ -37,20 +37,20 @@ var month: int
 var h: int
 var d: int
 func main()
-	do lib@intToDate(lib@now(), &@year, &@month, &, &, &, &)
-	if(^lib@cmdLine() > 0)
-		do lib@cmdLine()[0].toInt(&@year)
-		if(^lib@cmdLine() > 1)
-			do lib@cmdLine()[1].toInt(&@month)
+	do lib@intToDate(lib@now(), &amp;@year, &amp;@month, &amp;, &amp;, &amp;, &amp;)
+	if(^lib@cmdLine() &gt; 0)
+		do lib@cmdLine()[0].toInt(&amp;@year)
+		if(^lib@cmdLine() &gt; 1)
+			do lib@cmdLine()[1].toInt(&amp;@month)
 		end if
 	end if
-	assert @year >= 1582
-	assert 1 <= @month & @month <= 12
+	assert @year &gt;= 1582
+	assert 1 &ls;= @month &amp; @month &ls;= 12
 	var m: int :: (@month + 9) % 12 + 3
-	var y: int :: @year - (m > 12 ?(1, 0))
+	var y: int :: @year - (m &gt; 12 ?(1, 0))
 	do @h :: (y + y / 4 - y / 100 + y / 400 + (13 * (m + 1)) / 5) % 7
 	do y :+ 1
-	do @d :: 28 + [3, 3, (y % 400 = 0 | y % 100 <> 0 & y % 4 = 0) ?(1, 0), 3, 2, 3, 2, 3, 3, 2, 3, 2][m % 12]
+	do @d :: 28 + [3, 3, (y % 400 = 0 | y % 100 &ls;&gt; 0 &amp; y % 4 = 0) ?(1, 0), 3, 2, 3, 2, 3, 3, 2, 3, 2][m % 12]
 	const wndSizeW: int :: 360
 	const wndSizeH: int :: 240
 	var wndMain: wnd@Wnd :: wnd@makeWnd(null, %aspect, wndSizeW, wndSizeH, @title)
