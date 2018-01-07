@@ -45,12 +45,12 @@ func main()
 		end if
 	end if
 	assert @year &gt;= 1582
-	assert 1 &ls;= @month &amp; @month &ls;= 12
+	assert 1 &lt;= @month &amp; @month &lt;= 12
 	var m: int :: (@month + 9) % 12 + 3
 	var y: int :: @year - (m &gt; 12 ?(1, 0))
 	do @h :: (y + y / 4 - y / 100 + y / 400 + (13 * (m + 1)) / 5) % 7
 	do y :+ 1
-	do @d :: 28 + [3, 3, (y % 400 = 0 | y % 100 &ls;&gt; 0 &amp; y % 4 = 0) ?(1, 0), 3, 2, 3, 2, 3, 3, 2, 3, 2][m % 12]
+	do @d :: 28 + [3, 3, (y % 400 = 0 | y % 100 &lt;&gt; 0 &amp; y % 4 = 0) ?(1, 0), 3, 2, 3, 2, 3, 3, 2, 3, 2][m % 12]
 	const wndSizeW: int :: 360
 	const wndSizeH: int :: 240
 	var wndMain: wnd@Wnd :: wnd@makeWnd(null, %aspect, wndSizeW, wndSizeH, @title)
