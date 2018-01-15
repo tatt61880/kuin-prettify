@@ -40,7 +40,7 @@ PR['registerLangHandler'](
          [PR['PR_LITERAL'], /^16#[0-9A-F]+(?=(?:b(?:8|16|32|64)|)\b)/, null, '1'],
         ],
         [
-         [PR['PR_STRING'],  /^(?:"|})(?:[^"\\]|\\[^{])*(?:"|\\{)/, null, '"'],
+         [PR['PR_STRING'],  /^(?:"|})(?:[^"\\]|\\[^{])*(?:"|\\{)/, null],
          [PR['PR_COMMENT'], /^\s*;.*/, null],
          [PR['PR_TYPE'],    /^(?:int|float|char|bool|bit8|bit16|bit32|bit64|list|stack|queue|dict)\b/, null],
          [PR['PR_KEYWORD'], /^(?:func|var|const|class|enum)\b/, null],
