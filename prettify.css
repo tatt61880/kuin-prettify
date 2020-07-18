@@ -12,6 +12,10 @@ pre .opn { color:#666666 } /* ( */
 pre .clo { color:#666666 } /* ) */
 pre .global { color:#CC00F6 } /* global */
 
+pre.lang-text .pln { color:#333333 }
+pre.lang-text .opn { color:#666600 }
+pre.lang-text .clo { color:#666600 }
+
 ol.linenums {
 	margin:0;
 }
